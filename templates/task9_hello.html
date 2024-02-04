@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<p>Hello {{ session['username'] }}, your email is {{ session['email'] }} !</p>
+<form action="/logout/" method="get">
+    <input type="submit" value="Exit">
+</form>
+{% endblock %}
